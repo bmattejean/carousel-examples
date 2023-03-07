@@ -1,0 +1,155 @@
+.RecsContainer {
+    position: relative;
+    max-width: 1000px;
+    margin: 100px auto 0;
+    text-align: center;
+    overflow: hidden;
+  
+    &-headline {
+      margin-bottom: 24px;
+      &-city {
+        text-transform: capitalize;
+      }
+    }
+  
+    &-arrows {
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-350px);
+      margin: 0 -10%;
+      
+      
+      .arrow {
+        border: solid #cccccc;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 4px;
+        margin: 5px;
+        &:hover, &:focus {
+          border-color: #6e6e6e;
+          cursor: pointer;
+        }
+      }
+      
+      .right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+      
+      .left {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+      }
+    }
+  
+    &-productImg {
+      aspect-ratio: 4/5;
+      height: 192px;
+      margin-bottom: 30px;
+    }
+  
+    &-product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    &-textWrap {
+      display: flex;
+      
+      & > div, span {
+        place-self: center;
+      }
+    }
+    
+    &-productPrice {
+      padding-right: 40px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    
+    .AddToWishlistButton {
+      padding: 8px 0 8px 10px;
+      background: transparent;
+      border: 0;
+    }
+  }
+  
+  .glide {
+    position: relative;
+    width: 80%;
+    box-sizing: border-box;
+  
+    & * {
+      box-sizing: inherit;
+    }
+  
+    &__track {
+      overflow: hidden;
+    }
+  
+    &__slides {
+      position: relative;
+      width: 100%;
+      list-style: none;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      touch-action: pan-Y;
+      padding: 0;
+      white-space: nowrap;
+      display: flex;
+      flex-wrap: nowrap;
+      will-change: transform;
+  
+      &--dragging {
+        user-select: none;
+      }
+    }
+  
+    &__slide {
+      height: 375px;
+      white-space: normal;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+  
+      a {
+        user-select: none;
+        -webkit-user-drag: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
+    }
+    
+    &__arrows {
+      display: flex;
+      place-content: space-between;
+      transform: translateY(-300px);
+      overflow: visible;
+      
+      .arrow {
+        border: solid #cccccc;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 4px;
+        margin: 5px;
+        &:hover, &:focus {
+          border-color: #6e6e6e;
+          cursor: pointer;
+        }
+      }
+      
+      .right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+      
+      .left {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+      }
+    }
+  
+    &--rtl {
+      direction: rtl;
+    }
+  }
